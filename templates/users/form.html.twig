@@ -1,0 +1,54 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block title %}Categoria index
+{% endblock %}
+
+{% block content %}
+
+	<div
+		class="content-wrapper mt-3">
+		<!-- Main content -->
+		<section
+			class="content">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Cadastrar Usuário</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					<form>
+						{# <div class="mb-3">
+							<label for="disabledTextInput" class="form-label">Disabled input</label>
+							<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+						</div> #}
+
+						<div class="mb-3">
+							<label for="titulo" class="form-label">Nome Usuário</label>                            
+							<input class="form-control" id="titulo" name="titulo" type="text" value="{{ user.nome }}">
+						</div>
+
+						<div class="float-right">
+							<a href="{{ path('admin_filmes') }}">
+								<button class="btn btn-primary mt-2">{{ button_label|default('Voltar') }}</button>
+							</a>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+			<!-- /.card -->
+		</section>
+		<!-- /.content -->
+	</div>
+{% endblock %}

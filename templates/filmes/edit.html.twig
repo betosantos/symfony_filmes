@@ -1,0 +1,46 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block title %}Editar Filme
+{% endblock %}
+
+{% block content %}
+	<div
+		class="content-wrapper mt-3">
+		<!-- Main content -->
+		<section
+			class="content">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Editar Filme</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					{{ include('filmes/_form.html.twig', {'button_label': 'Atualizar'}) }}
+
+					{% if(filme.foto == null) %}
+						<img src="{{ asset('imagens/semfoto.png') }}" width="50" heigth="50">
+					{% else %}
+						<img src="{{ asset('uploads/filmes/' ~ filme.foto) }}" width="50" heigth="50">
+					{% endif %}
+
+					{# <img src="{{ asset('uploads/filmes/' ~ filme.foto) }}" width="50" heigth="50"> #}
+					{# <a href="{{ path('admin_filmes') }}">back to list</a> #}
+					{# {{ include('filmes/_delete_form.html.twig', {'button_label': 'Apagar'}) }} #}
+
+				</div>
+			</div>
+			<!-- /.card -->
+		</section>
+		<!-- /.content -->
+	</div>
+{% endblock %}

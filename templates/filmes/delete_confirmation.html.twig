@@ -1,0 +1,49 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block title %}Categoria index
+{% endblock %}
+
+{% block content %}
+
+	<div class="content-wrapper mt-3">
+		<!-- Main content -->
+		<section
+			class="content">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Cadastrar Categorias</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body text-center">
+
+					<h3>Confirmação de Exclusão</h3>
+					<h4>Tem certeza de que deseja excluir o registro
+						<strong>{{ record.titulo }}?
+						</strong>
+					</h4>
+
+					<form method="post" action="{{ path('app_filmes_delete', {'id': record.id}) }}">
+						<input type="hidden" id="confirm" name="confirm" value="confirm"/>
+						<button class="btn btn-lg btn-danger" type="submit">Confirmar Exclusão</button>
+					</form>
+					<br/>
+					<a href="{{ path('admin_filmes') }}">
+						<button class="btn btn-secondary">Cancelar</button>
+					</a>
+
+				</div>
+			</div>
+			<!-- /.card -->
+		</section>
+		<!-- /.content -->
+	</div>
+{% endblock %}

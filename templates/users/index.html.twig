@@ -1,0 +1,63 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block title %}Usuários
+{% endblock %}
+
+{% block content %}
+
+	<!-- Content Wrapper. Contains page content -->
+	<div
+		class="content-wrapper mt-3">
+		<!-- Main content -->
+		<section
+			class="content">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Usuários</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Email</th>
+								<th class="float-right">Ações</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{% for user in pagination %}
+								<tr>
+									<td> {{ user.nome }}</td>
+									<td> {{ user.email }}</td>
+									<td>dd</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+					{# <a href="{{ path('app_categorias_new') }}">Create new</a> #}
+					<div class="float-right">
+						<a href="{{ path('admin_filmes_new')}}">
+							<button class="btn btn-primary mt-2">Novo</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- /.card -->
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block title %}Filmes
+{% endblock %}
+
+{% block content %}
+
+	<!-- Content Wrapper. Contains page content -->
+	<div
+		class="content-wrapper mt-3">
+		<!-- Main content -->
+		<section
+			class="content">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Filmes</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								{# <th>Id</th> #}
+								<th>Capa</th>
+								<th>Categoria</th>
+								<th>Titulo</th>								
+								<th class="float-right">Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for filme in filmes %}
+								<tr>
+									{# <td>{{ filme.id }}</td> #}
+									<td>
+										{% if(filme.foto == null) %}
+											<img src="{{ asset('imagens/semfoto.png') }}" width="50" heigth="50">
+										{% else %}
+											<img src="{{ asset('uploads/filmes/' ~ filme.foto) }}" width="50" heigth="50">
+										{% endif %}
+									</td>
+									<td>{{ filme.categoria.nome }}</td>
+									<td>
+										<a href="{{ path('app_filmes_show', {'id': filme.id }) }}">{{ filme.titulo }}</a>
+									</td>									
+									<td class="d-flex justify-content-end">
+										<a href="{{ path('app_filmes_edit', {'id': filme.id}) }}">
+											<i class="fas fa-marker fa-lg"></i>
+										</a>
+										&nbsp;&nbsp;
+										<a href="{{ path('confirm_filmes_delete', {'id': filme.id}) }}" style="color:red;">
+											<i class="fas fa-trash fa-lg"></i>
+										</a>
+									</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td colspan="4">Não há registros Cadastrados.</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+
+					{# <a href="{{ path('app_categorias_new') }}">Create new</a> #}
+					<div class="float-right">
+						<a href="{{ path('admin_filmes_new')}}">
+							<button class="btn btn-primary mt-2">Novo</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- /.card -->
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+{% endblock %}

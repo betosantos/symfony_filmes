@@ -1,0 +1,15 @@
+
+{{ form_start(form) }}
+    {{ form_row(form.nome, {
+        'label': 'Nome',
+        'attr': {'class': 'form-control'}
+    }) }}
+
+<div class="float-right">
+    <button class="btn btn-primary mt-2">{{ button_label|default('Salvar') }}</button>
+</div>
+
+{{ form_end(form) }}
+
+
+

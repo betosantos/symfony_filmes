@@ -1,0 +1,61 @@
+{% extends 'admin/adminbase.html.twig' %}
+
+{% block title %}Editar Categoria
+{% endblock %}
+
+{% block content %}
+
+
+	<!-- Content Wrapper. Contains page content -->
+	<div
+		class="content-wrapper mt-3">
+		<!-- Main content -->
+		<section
+			class="content">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Detalhes da Categorias</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					<div class="col-12">
+						<form>
+							<div class="row">
+								<div class="col-3">
+									<label>Id </label>
+                                    <p>{{ categorium.id }}</p>
+                                </div>								
+                                <div class="col-9">
+									<label>Nome Categoria </label>
+                                    <p>{{ categorium.nome }}</p>
+                                </div>								
+                            </div>								
+						</form>
+					</div>
+
+				</div>
+
+							{# <div class="float-right">
+																										                        <a href="{{ path('app_categorias_edit', {'id': categorium.id}) }}">Editar</a>
+																										                    </div> #}
+							{# {{ include('categorias/_delete_form.html.twig') }}					 #}
+
+						</div>
+						<!-- /.card -->
+					</section>
+					<!-- /.content -->
+				</div>
+				<!-- /.content-wrapper -->
+
+
+			{% endblock %}
