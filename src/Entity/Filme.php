@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FilmeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -25,6 +27,14 @@ class Filme
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $foto = null;
+
+    #[ORM\OneToMany(mappedBy: 'filme', targetEntity: Photos::class)]
+    private Collection $photos;
+
+    public function __construct()
+    {
+        $this->photos = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -77,6 +87,42 @@ class Filme
         $this->foto = $foto;
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, Photos>
+     */
+    public function getPhotos(): Collection
+    {
+        return $this->photos;
+    }
+
+    public function addPhoto(Photos $photo): static
+    {
+        if (!$this->photos->contains($photo)) {
+            $this->photos->add($photo);
+            $photo->setFilme($this);
+        }
+
+        return $this;
+    }
+
+    public function removePhoto(Photos $photo): static
+    {
+        if ($this->photos->removeElement($photo)) {
+            // set the owning side to null (unless already changed)
+            if ($photo->getFilme() === $this) {
+                $photo->setFilme(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+    public function __toString()
+    {
+        return $this->titulo;
     }
 
     

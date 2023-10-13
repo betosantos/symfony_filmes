@@ -39,8 +39,7 @@
 						</thead>
 						<tbody>
 							{% for filme in filmes %}
-								<tr>
-									{# <td>{{ filme.id }}</td> #}
+								<tr>									
 									<td>
 										{% if(filme.foto == null) %}
 											<img src="{{ asset('imagens/semfoto.png') }}" width="50" heigth="50">
@@ -60,6 +59,11 @@
 										<a href="{{ path('confirm_filmes_delete', {'id': filme.id}) }}" style="color:red;">
 											<i class="fas fa-trash fa-lg"></i>
 										</a>
+
+										<a href="{{ path('photos', {'id': filme.id}) }}" style="color:yellow;">
+											<i class="fas fa-trash fa-lg"></i>
+										</a>
+
 									</td>
 								</tr>
 							{% else %}
@@ -71,7 +75,6 @@
 					</table>
 
 
-					{# <a href="{{ path('app_categorias_new') }}">Create new</a> #}
 					<div class="float-right">
 						<a href="{{ path('admin_filmes_new')}}">
 							<button class="btn btn-primary mt-2">Novo</button>

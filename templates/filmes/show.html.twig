@@ -1,7 +1,6 @@
 {% extends 'admin/adminbase.html.twig' %}
 
-{% block title %}Filme
-{% endblock %}
+{% block title %}Filme {% endblock %}
 
 {% block content %}
 	<div
@@ -50,6 +49,18 @@
 									<label for="descricao" class="form-label">Descrição</label>
 									<textarea class="form-control" id="descricao" name="descricao" rows="3">{{ filme.descricao }}</textarea>
 								</div>
+
+
+								<div class="container text-center">									
+									<div class="row align-items-start">
+									{% for photo in photos %}
+										<div class="col-3">
+											<img src="{{ asset('uploads/photos/' ~ photo.foto) }}" width="180" heigth="180"/>											
+										</div>
+										{% endfor %}
+									</div>										
+								</div>
+
 
 								<div class="float-right">
 									<a href="{{ path('admin_filmes') }}"><button class="btn btn-primary mt-2">{{ button_label|default('Voltar') }}</button></a>

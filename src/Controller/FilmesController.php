@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Entity\Filme;
+use App\Entity\Photos;
 use App\Form\FilmeType;
 use App\Repository\FilmeRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -65,10 +66,16 @@ class FilmesController extends AbstractController
 
 
   #[Route('/{id}', name: 'app_filmes_show', methods: ['GET'])]
-  public function show(Filme $filme): Response
+  public function show(int $id, Filme $filme, Photos $photos, EntityManagerInterface $entityManager): Response
   {
+    
+    $filme = $entityManager->getRepository(Filme::class)->find($id);
+    $photos = $filme->getPhotos();
+       
+
     return $this->render('filmes/show.html.twig', [
       'filme' => $filme,
+      'photos' => $photos,
     ]);
   }
 

@@ -1,7 +1,6 @@
 {% extends 'admin/adminbase.html.twig' %}
 
-{% block title %}Usuários
-{% endblock %}
+{% block title %}Usuários {% endblock %}
 
 {% block content %}
 
@@ -31,7 +30,7 @@
 						<thead>
 							<tr>
 								<th>Nome</th>
-								<th>Email</th>
+								<th>Email</th>								
 								<th class="float-right">Ações</th>
 							</tr>
 						</thead>
@@ -40,8 +39,8 @@
 							{% for user in pagination %}
 								<tr>
 									<td> {{ user.nome }}</td>
-									<td> {{ user.email }}</td>
-									<td>dd</td>
+									<td> {{ user.email }}</td>									
+									<td class="float-right">dd</td>
 								</tr>
 							{% endfor %}
 						</tbody>
