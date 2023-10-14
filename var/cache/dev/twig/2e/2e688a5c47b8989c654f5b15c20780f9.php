@@ -109,28 +109,32 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t\t<a class=\"nav-link\" data-widget=\"fullscreen\" href=\"#\" role=\"button\">
 \t\t\t\t\t<i class=\"fas fa-expand-arrows-alt\"></i>
 \t\t\t\t</a>
-\t\t\t</li>
-\t\t\t<li class=\"nav-item\">
-\t\t\t\t<a class=\"nav-link\" data-widget=\"control-sidebar\" data-slide=\"true\" href=\"#\" role=\"button\">
-\t\t\t\t\t<i class=\"fas fa-th-large\"></i>
-\t\t\t\t</a>
-\t\t\t</li>
+\t\t\t</li>\t\t\t
 \t\t</ul>
 \t</nav>
 \t<!-- /.navbar -->
 
 \t<!-- Main Sidebar Container -->
-\t<aside
-\t\tclass=\"main-sidebar sidebar-dark-primary elevation-4\">
+\t<aside class=\"main-sidebar sidebar-dark-primary elevation-4\">
 \t\t<!-- Brand Logo -->
-\t\t<div class=\"brand-link\">
+\t\t";
+        // line 71
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 71, $this->source); })()), "user", [], "any", false, false, false, 71)) {
+            // line 72
+            echo "\t\t<div class=\"brand-link\">
 \t\t\t<img src=\"";
-        // line 78
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/dist/img/AdminLTELogo.png"), "html", null, true);
-        echo "\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">
-\t\t\t<span class=\"brand-text font-weight-light\">Painel</span>
+            // line 73
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("imagens/logout.jpg"), "html", null, true);
+            echo "\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">
+\t\t\t<a href=\"";
+            // line 74
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\" style=\"color:white;\"><span class=\"brand-text font-weight-light info\">Sair</span></a>
 \t\t</div>
-
+\t\t";
+        }
+        // line 77
+        echo "
 \t\t<!-- Sidebar -->
 \t\t<div
 \t\t\tclass=\"sidebar\">
@@ -138,25 +142,27 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t<div class=\"user-panel mt-3 pb-3 mb-3 d-flex\">
 \t\t\t\t<div class=\"image\">
 \t\t\t\t\t<img src=\"";
-        // line 88
+        // line 84
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/dist/img/user2-160x160.jpg"), "html", null, true);
         echo "\" class=\"img-circle elevation-2\" alt=\"User Image\">
 \t\t\t\t</div>
 \t\t\t\t<div class=\"info\">
 \t\t\t\t\t";
-        // line 91
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 91, $this->source); })()), "user", [], "any", false, false, false, 91)) {
-            // line 92
-            echo "\t\t\t\t\t\t<div class=\"mb-3\" style=\"color:white;\">
+        // line 87
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 87, $this->source); })()), "user", [], "any", false, false, false, 87)) {
+            // line 88
+            echo "\t\t\t\t\t\t<div class=\"mb-3\" style=\"color:white;\">\t\t\t\t\t\t
+\t\t\t\t\t\t\t<span>Bem-Vindo:</span><br> 
 \t\t\t\t\t\t\t";
-            // line 93
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 93, $this->source); })()), "user", [], "any", false, false, false, 93), "nome", [], "any", false, false, false, 93), "html", null, true);
+            // line 90
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_split_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 90, $this->source); })()), "user", [], "any", false, false, false, 90), "nome", [], "any", false, false, false, 90), " "), 0, [], "array", false, false, false, 90), "html", null, true);
             echo "
 \t\t\t\t\t\t</div>
 \t\t\t\t\t";
         }
-        // line 96
-        echo "\t\t\t\t</div>
+        // line 92
+        echo "\t\t\t\t\t
+\t\t\t\t</div>
 \t\t\t</div>
 
 \t\t\t<!-- Sidebar Menu -->
@@ -187,7 +193,7 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t\t\t</li>
 \t\t\t\t\t
 \t\t\t\t\t<a href=\"";
-        // line 126
+        // line 123
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_users_index");
         echo "\" class=\"nav-link botao\" style=\"color:white;\">
 \t\t\t\t\t\t<i class=\"nav-icon fas fa-tachometer-alt\">
@@ -196,7 +202,7 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t\t\t</a>
 
 \t\t\t\t\t<a href=\"";
-        // line 132
+        // line 129
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_categorias_index");
         echo "\" class=\"nav-link botao\" style=\"color:white;\">
 \t\t\t\t\t\t<i class=\"nav-icon fas fa-tachometer-alt\">
@@ -204,7 +210,7 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t\t\t\t</i>
 \t\t\t\t\t</a>
 \t\t\t\t\t<a href=\"";
-        // line 137
+        // line 134
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_filmes");
         echo "\" class=\"nav-link\" style=\"color:white;\">
 \t\t\t\t\t\t<i class=\"nav-icon fas fa-tachometer-alt\">
@@ -222,12 +228,12 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 
 
 \t";
-        // line 152
+        // line 149
         $this->displayBlock('content', $context, $blocks);
-        // line 154
+        // line 151
         echo "
 \t";
-        // line 165
+        // line 162
         echo "
 \t<!-- Control Sidebar -->
 \t<aside
@@ -237,13 +243,13 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 </div>
 
  <script src=\"";
-        // line 173
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/plugins/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script> <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/plugins/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
  <script src=\"";
-        // line 174
+        // line 171
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/dist/js/adminlte.min.js"), "html", null, true);
         echo "\"></script> 
  
@@ -258,7 +264,7 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 
     }
 
-    // line 152
+    // line 149
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -268,7 +274,7 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 153
+        // line 150
         echo "\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -290,7 +296,7 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 
     public function getDebugInfo()
     {
-        return array (  272 => 153,  262 => 152,  247 => 174,  241 => 173,  231 => 165,  228 => 154,  226 => 152,  208 => 137,  200 => 132,  191 => 126,  159 => 96,  153 => 93,  150 => 92,  148 => 91,  142 => 88,  129 => 78,  57 => 9,  53 => 8,  44 => 1,);
+        return array (  278 => 150,  268 => 149,  253 => 171,  247 => 170,  237 => 162,  234 => 151,  232 => 149,  214 => 134,  206 => 129,  197 => 123,  164 => 92,  158 => 90,  154 => 88,  152 => 87,  146 => 84,  137 => 77,  131 => 74,  127 => 73,  124 => 72,  122 => 71,  57 => 9,  53 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -357,24 +363,20 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t\t<a class=\"nav-link\" data-widget=\"fullscreen\" href=\"#\" role=\"button\">
 \t\t\t\t\t<i class=\"fas fa-expand-arrows-alt\"></i>
 \t\t\t\t</a>
-\t\t\t</li>
-\t\t\t<li class=\"nav-item\">
-\t\t\t\t<a class=\"nav-link\" data-widget=\"control-sidebar\" data-slide=\"true\" href=\"#\" role=\"button\">
-\t\t\t\t\t<i class=\"fas fa-th-large\"></i>
-\t\t\t\t</a>
-\t\t\t</li>
+\t\t\t</li>\t\t\t
 \t\t</ul>
 \t</nav>
 \t<!-- /.navbar -->
 
 \t<!-- Main Sidebar Container -->
-\t<aside
-\t\tclass=\"main-sidebar sidebar-dark-primary elevation-4\">
+\t<aside class=\"main-sidebar sidebar-dark-primary elevation-4\">
 \t\t<!-- Brand Logo -->
+\t\t{% if app.user %}
 \t\t<div class=\"brand-link\">
-\t\t\t<img src=\"{{ asset('admin/dist/img/AdminLTELogo.png') }}\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">
-\t\t\t<span class=\"brand-text font-weight-light\">Painel</span>
+\t\t\t<img src=\"{{ asset('imagens/logout.jpg') }}\" alt=\"AdminLTE Logo\" class=\"brand-image img-circle elevation-3\" style=\"opacity: .8\">
+\t\t\t<a href=\"{{ path('app_logout') }}\" style=\"color:white;\"><span class=\"brand-text font-weight-light info\">Sair</span></a>
 \t\t</div>
+\t\t{% endif %}
 
 \t\t<!-- Sidebar -->
 \t\t<div
@@ -386,10 +388,11 @@ class __TwigTemplate_0803f4e041d3bf58ae1b48467289d009 extends Template
 \t\t\t\t</div>
 \t\t\t\t<div class=\"info\">
 \t\t\t\t\t{% if app.user %}
-\t\t\t\t\t\t<div class=\"mb-3\" style=\"color:white;\">
-\t\t\t\t\t\t\t{{ app.user.nome }}
+\t\t\t\t\t\t<div class=\"mb-3\" style=\"color:white;\">\t\t\t\t\t\t
+\t\t\t\t\t\t\t<span>Bem-Vindo:</span><br> 
+\t\t\t\t\t\t\t{{ app.user.nome|split(' ')[0] }}
 \t\t\t\t\t\t</div>
-\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endif %}\t\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 

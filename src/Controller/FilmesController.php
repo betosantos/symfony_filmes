@@ -105,16 +105,6 @@ class FilmesController extends AbstractController
     ]);
   }
 
-  // #[Route('/{id}', name: 'app_filmes_delete', methods: ['POST'])]
-  // public function delete(Request $request, Filme $filme, EntityManagerInterface $entityManager): Response
-  // {
-  //   if ($this->isCsrfTokenValid('delete'.$filme->getId(), $request->request->get('_token'))) {
-  //     $entityManager->remove($filme);
-  //     $entityManager->flush();
-  //   }
-
-  //   return $this->redirectToRoute('admin_filmes', [], Response::HTTP_SEE_OTHER);
-  // }
 
 
   #[Route('/delete/{id}', name: 'app_filmes_delete', methods: ['POST'])]

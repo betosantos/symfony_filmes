@@ -173,21 +173,13 @@ class __TwigTemplate_456f9e532c014870e3bf5233bbdd7aca extends Template
             echo "\" style=\"color:red;\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-trash fa-lg\"></i>
 \t\t\t\t\t\t\t\t\t\t</a>
-
-\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 63
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("photos", ["id" => twig_get_attribute($this->env, $this->source, $context["filme"], "id", [], "any", false, false, false, 63)]), "html", null, true);
-            echo "\" style=\"color:yellow;\">
-\t\t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-trash fa-lg\"></i>
-\t\t\t\t\t\t\t\t\t\t</a>
-
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 70
+            // line 65
             echo "\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t<td colspan=\"4\">Não há registros Cadastrados.</td>
 \t\t\t\t\t\t\t\t</tr>
@@ -196,14 +188,14 @@ class __TwigTemplate_456f9e532c014870e3bf5233bbdd7aca extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['filme'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 69
         echo "\t\t\t\t\t\t</tbody>
 \t\t\t\t\t</table>
 
 
 \t\t\t\t\t<div class=\"float-right\">
 \t\t\t\t\t\t<a href=\"";
-        // line 79
+        // line 74
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_filmes_new");
         echo "\">
 \t\t\t\t\t\t\t<button class=\"btn btn-primary mt-2\">Novo</button>
@@ -237,7 +229,7 @@ class __TwigTemplate_456f9e532c014870e3bf5233bbdd7aca extends Template
 
     public function getDebugInfo()
     {
-        return array (  207 => 79,  200 => 74,  191 => 70,  179 => 63,  172 => 59,  165 => 55,  157 => 52,  152 => 50,  149 => 49,  143 => 47,  137 => 45,  135 => 44,  131 => 42,  126 => 41,  117 => 34,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  199 => 74,  192 => 69,  183 => 65,  172 => 59,  165 => 55,  157 => 52,  152 => 50,  149 => 49,  143 => 47,  137 => 45,  135 => 44,  131 => 42,  126 => 41,  117 => 34,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -303,11 +295,6 @@ class __TwigTemplate_456f9e532c014870e3bf5233bbdd7aca extends Template
 \t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('confirm_filmes_delete', {'id': filme.id}) }}\" style=\"color:red;\">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-trash fa-lg\"></i>
 \t\t\t\t\t\t\t\t\t\t</a>
-
-\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('photos', {'id': filme.id}) }}\" style=\"color:yellow;\">
-\t\t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-trash fa-lg\"></i>
-\t\t\t\t\t\t\t\t\t\t</a>
-
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t{% else %}
