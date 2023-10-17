@@ -22,6 +22,13 @@ class CategoriasController extends AbstractController
     #[Route('/', name: 'admin_categorias_index', methods: ['GET'])]
     public function index(EntityManagerInterface $entityManager, Request $request, PaginatorInterface $paginator): Response
     {
+        $user = $this->getUser();
+        
+        if ($user->isVerified() == 0 )
+        {
+            return new Response('Email não foi verificado, confirme seu email para continua');
+        }
+
         $repository = $entityManager->getRepository(Categoria::class);
         $queryBuilder = $repository->createQueryBuilder('c');
         

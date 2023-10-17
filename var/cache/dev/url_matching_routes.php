@@ -19,8 +19,16 @@ return [
         '/admin/filmes' => [[['_route' => 'admin_filmes', '_controller' => 'App\\Controller\\FilmesController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/filmes/new' => [[['_route' => 'admin_filmes_new', '_controller' => 'App\\Controller\\FilmesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/enviar' => [[['_route' => 'enviar', '_controller' => 'App\\Controller\\HomeController::sendEmail'], null, null, null, false, false, null]],
         '/email' => [[['_route' => 'app_mail_sendemail', '_controller' => 'App\\Controller\\MailController::sendEmail'], null, null, null, false, false, null]],
-        '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/register' => [
+            [['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null],
+            [['_route' => 'app_register_old', '_controller' => 'App\\Controller\\RegistrationController_old::register'], null, null, null, false, false, null],
+        ],
+        '/verify/email' => [
+            [['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null],
+            [['_route' => 'app_verify_email_old', '_controller' => 'App\\Controller\\RegistrationController_old::verifyUserEmail'], null, null, null, false, false, null],
+        ],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/admin/usuarios' => [[['_route' => 'admin_users_index', '_controller' => 'App\\Controller\\UsersController::index'], null, null, null, true, false, null]],

@@ -24,16 +24,10 @@ class __TwigTemplate_1b22df2cb4953c85869991cabac75c26 extends Template
 
         $this->source = $this->getSourceContext();
 
-        $this->blocks = [
-            'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
-        ];
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        // line 1
-        return "base.html.twig";
+        $this->blocks = [
+        ];
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,74 +39,35 @@ class __TwigTemplate_1b22df2cb4953c85869991cabac75c26 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home/index.html.twig", 1);
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-    }
-
-    // line 3
-    public function block_title($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
-
-        echo "Hello HomeController!
-";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-    }
-
-    // line 6
-    public function block_body($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
-
-        // line 7
-        echo "\t<div class=\"example-wrapper container\">
+        // line 1
+        echo "
+\t<div class=\"example-wrapper container\">
 \t\t<h1>Hello ✅</h1>
 
 \t\t";
-        // line 10
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10)) {
-            // line 11
+        // line 5
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 5, $this->source); })()), "user", [], "any", false, false, false, 5)) {
+            // line 6
             echo "\t\t\t<div class=\"mb-3\">
 \t\t\t\tVocê está logado como:
 \t\t\t\t";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), "userIdentifier", [], "any", false, false, false, 13), "html", null, true);
+            // line 8
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8), "userIdentifier", [], "any", false, false, false, 8), "html", null, true);
             echo ",
 \t\t\t\t<a href=\"";
-            // line 14
+            // line 9
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
 \t\t\t</div>
 \t\t";
         } else {
-            // line 17
+            // line 12
             echo "\t\t\t<div class=\"mb-3\">
 \t\t\t\tVocê não esta logado no sistema!!!
 \t\t\t</div>
 \t\t";
         }
-        // line 21
+        // line 16
         echo "
 
 \t\tThis friendly message is coming from:
@@ -120,7 +75,7 @@ class __TwigTemplate_1b22df2cb4953c85869991cabac75c26 extends Template
 \t\t\t<li>Your controller at
 \t\t\t\t<code>
 \t\t\t\t\t<a href=\"";
-        // line 27
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/home/beto/sinfonia/src/Controller/HomeController.php", 0), "html", null, true);
         echo "\">src/Controller/HomeController.php</a>
 \t\t\t\t</code>
@@ -128,19 +83,20 @@ class __TwigTemplate_1b22df2cb4953c85869991cabac75c26 extends Template
 \t\t\t<li>Your template at
 \t\t\t\t<code>
 \t\t\t\t\t<a href=\"";
-        // line 32
+        // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/home/beto/sinfonia/templates/home/index.html.twig", 0), "html", null, true);
         echo "\">templates/home/index.html.twig</a>
 \t\t\t\t</code>
 \t\t\t</li>
 \t\t</ul>
 \t</div>
+
 ";
         
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
         
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
@@ -156,17 +112,12 @@ class __TwigTemplate_1b22df2cb4953c85869991cabac75c26 extends Template
 
     public function getDebugInfo()
     {
-        return array (  132 => 32,  124 => 27,  116 => 21,  110 => 17,  104 => 14,  100 => 13,  96 => 11,  94 => 10,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  87 => 27,  79 => 22,  71 => 16,  65 => 12,  59 => 9,  55 => 8,  51 => 6,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
-
-{% block title %}Hello HomeController!
-{% endblock %}
-
-{% block body %}
+        return new Source("
 \t<div class=\"example-wrapper container\">
 \t\t<h1>Hello ✅</h1>
 
@@ -197,7 +148,7 @@ class __TwigTemplate_1b22df2cb4953c85869991cabac75c26 extends Template
 \t\t\t</li>
 \t\t</ul>
 \t</div>
-{% endblock %}
+
 ", "home/index.html.twig", "/home/beto/sinfonia/templates/home/index.html.twig");
     }
 }

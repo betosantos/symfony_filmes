@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Formulário de Login">
+		<meta name="author" content="José Roberto O.">
+		<meta name="keywords" content="Form Login">
+		<title>Formulário de Registro de Usuário</title>
+		<link href="{{ asset('vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
+		<link href="{{ asset('vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+		<link href="{{ asset('css/main.css') }}" rel="stylesheet" media="all">
+
+		<style>
+			.btn-primary {
+				background: #f4476b;
+				border: none;
+				border-radius: 4px;
+				padding: 11px;
+				box-shadow: none;
+				margin-top: 35px;
+				text-shadow: none;
+				outline: none !important;
+			}
+			.btn-block {
+				display: block;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+			<div class="wrapper wrapper--w680">
+				<div class="card card-1">
+					<div class="card-heading"></div>
+					<div class="card-body">
+						<h2 class="title">Cadastro de Usuário</h2>
+
+						<form method="post">
+							{{ form_start(registrationForm) }}
+
+							<div class="input-group">
+								{{ form_row(registrationForm.nome, {'attr': {'class': 'input--style-1'}}) }}
+							</div>
+
+							<div class="input-group">
+								{{ form_row(registrationForm.email, {'attr': {'class': 'input--style-1'}}) }}
+							</div>
+
+							<div class="input-group">
+								{{ form_row(registrationForm.telefone, {'attr': {'class': 'input--style-1'}}) }}
+							</div>
+					
+												
+							<div class="input-group">
+								{{ form_row(registrationForm.password.first) }}                            
+							</div>
+
+							<div class="input-group">
+								{{ form_row(registrationForm.password.second) }}                            
+							</div>
+
+
+
+							<div class="form-group">
+								<button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+							</div>
+
+							{{ form_end(registrationForm) }}
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		 <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+		 <script src="{{ asset('js/global.js') }}"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+	</body>
+</html>
+</head>
+</html>
